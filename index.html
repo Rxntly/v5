@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Population by Country | More or Less</title>
+   <!-- CSS Files -->
+   <link rel="stylesheet" href="css/base.css">
+   <link rel="stylesheet" href="css/components.css">
+   <link rel="stylesheet" href="css/animations.css">
+   <link rel="stylesheet" href="css/responsive.css">
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!-- Loading Screen -->
+   <div id="loading-screen" class="screen">
+      <div class="loading-container">
+         <div class="loading-text">Loading<span class="loading-dots"></span></div>
+      </div>
+   </div>
+
+   <!-- Game Screen -->
+   <div id="game-screen" class="screen hidden">
+      <!-- Back Button -->
+      <div class="backButton">
+         <a href="mainMenu.html">
+            <img src="Image Assets/back-arrow.svg" alt="Back" class="backButtonSVG">
+            <p class="backButtonText">Back</p>
+         </a>
+      </div>
+      <!-- Score Header -->
+      <div class="score-header">
+         <div class="highscore">
+            <div class="score-value" id="highscore-value">0</div>
+            <div class="score-label">Highscore</div>
+         </div>
+         <div class="divider"></div>
+         <div class="current-score">
+            <div class="score-value" id="score-value">0</div>
+            <div class="score-label">Score</div>
+         </div>
+      </div>
+
+      <main class="game-content">
+         <!-- Left Country Card -->
+         <div class="country-card" id="left-card">
+            <div class="flag-circle">
+               <img id="left-flag" class="country-flag" src="/placeholder.svg" alt="Country Flag">
+            </div>
+            <div class="country-info">
+               <div class="country-name" id="left-name"></div>
+               <div class="has-text">has</div>
+               <div class="country-population" id="left-population"></div>
+               <div class="population-text">population</div>
+            </div>
+         </div>
+
+         <!-- VS Separator -->
+         <div class="vs-separator">
+            <div class="vs-text" id="vs-text">VS</div>
+         </div>
+
+         <!-- Right Country Card -->
+         <div class="country-card" id="right-card">
+            <div class="flag-circle">
+               <img id="right-flag" class="country-flag" src="/placeholder.svg" alt="Country Flag">
+            </div>
+            <div class="country-info">
+               <div class="country-name" id="right-name"></div>
+               <div class="has-text">has</div>
+               <div class="country-population-container">
+                  <div class="population-placeholder" id="population-placeholder">?</div>
+                  <div class="country-population hidden" id="right-population"></div>
+               </div>
+               <div class="population-text">population</div>
+            </div>
+
+            <div class="guess-buttons">
+               <button id="higher-button" class="guess-button higher">
+                  <div class="button-content">
+                     <span class="button-icon">↑</span>
+                     <span class="button-text">Higher</span>
+                  </div>
+               </button>
+               <button id="lower-button" class="guess-button lower">
+                  <div class="button-content">
+                     <span class="button-icon">↓</span>
+                     <span class="button-text">Lower</span>
+                  </div>
+               </button>
+            </div>
+         </div>
+      </main>
+   </div>
+
+   <!-- Game Over Screen -->
+   <div id="game-over-screen" class="screen hidden">
+      <div class="game-over-container">
+         <h2 class="game-over-title">Game Over</h2>
+         <div class="final-score-container">
+            <div class="final-score-label">Your score</div>
+            <div class="final-score-value" id="final-score">0</div>
+         </div>
+         <div class="high-score-container">
+            <div class="high-score-label">High score</div>
+            <div class="high-score-value" id="high-score">0</div>
+         </div>
+         <button id="play-again-button" class="play-again-button">
+            <span>Play Again</span>
+         </button>
+         <div class="share-section">
+            <button id="share-button" class="share-button">
+               <span>Share Score</span>
+            </button>
+         </div>
+      </div>
+   </div>
+
+   <!-- JavaScript Files -->
+   <script src="js/config.js"></script>
+   <script src="js/data.js"></script>
+   <script src="js/ui.js"></script>
+   <script src="js/game.js"></script>
+   <script src="js/main.js"></script>
+</body>
+
+</html>
